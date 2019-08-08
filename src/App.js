@@ -1,13 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import MenuItem from "@material-ui/core/MenuItem";
-import Select from "@material-ui/core/Select";
 import SwipeableViews from "react-swipeable-views";
 import Tab1 from "./components/Tab1";
 import Tab2 from "./components/Tab2";
 
-class DemoTabs extends React.Component {
+class DemoTabs extends Component {
 	state = {
 		index: 0
 	};
@@ -31,7 +29,7 @@ class DemoTabs extends React.Component {
 			<div>
 				<Tabs
 					value={index}
-					fullWidth
+					centered
 					onChange={this.handleChange}
 					style={styles.tabs}
 				>
@@ -61,7 +59,7 @@ const styles = {
 	},
 	slide: {
 		padding: 15,
-		height: 500,
+		height: "100%",
 		color: "#fff"
 	},
 	slide1: {

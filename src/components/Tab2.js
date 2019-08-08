@@ -1,6 +1,6 @@
 import React from "react";
 import picture from "../img/contact.gif";
-import Map from "./Map";
+// import Map from "./Map";
 
 function Tab2() {
 	return (
@@ -8,9 +8,9 @@ function Tab2() {
 			<header style={styles.header}>
 				<h1>August 17th 2019</h1>
 				<h1>Rock Box Seattle</h1>
-				<Map />
 			</header>
-			{/* <img src={picture} alt="logo" /> */}
+			<img src={picture} style={styles.map} alt="logo" />
+			{/* <Map style={styles.map} /> */}
 		</div>
 	);
 }
@@ -21,5 +21,12 @@ const styles = {
 	header: {
 		flex: 1,
 		textAlign: "center"
+	},
+	map: {
+		justifyContent: "center",
+		alignItems: "center",
+		width: 400,
+		height: 300,
+		marginLeft: -10
 	}
 };
