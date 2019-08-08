@@ -1,22 +1,76 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import NavBar from "./components/NavBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import MenuItem from "@material-ui/core/MenuItem";
+import Select from "@material-ui/core/Select";
+import SwipeableViews from "react-swipeable-views";
+import Tab1 from "./components/Tab1";
+import Tab2 from "./components/Tab2";
 
-function App() {
-	return (
-		<div className="App">
-			<NavBar />
-			<header className="App-header">
-				<h1>You're invited!</h1>
-				<img src={logo} className="App-logo" alt="logo" />
-				<h1>Kelvin's 31st Birthday!</h1>
-			</header>
+class DemoTabs extends React.Component {
+	state = {
+		index: 0
+	};
+
+	handleChange = (event, value) => {
+		this.setState({
+			index: value
+		});
+	};
+
+	handleChangeIndex = index => {
+		this.setState({
+			index
+		});
+	};
+
+	render() {
+		const { index } = this.state;
+
+		return (
 			<div>
-				<i class="fa fa-angle-double-down" />
+				<Tabs
+					value={index}
+					fullWidth
+					onChange={this.handleChange}
+					style={styles.tabs}
+				>
+					<Tab label="WHERE" />
+					<Tab label="WHEN" />
+					<Tab label="RSVP" />
+				</Tabs>
+				<SwipeableViews index={index} onChangeIndex={this.handleChangeIndex}>
+					<div style={Object.assign({}, styles.slide, styles.slide1)}>
+						<Tab1 />
+					</div>
+					<div style={Object.assign({}, styles.slide, styles.slide2)}>
+						<Tab2 />
+					</div>
+					<div style={Object.assign({}, styles.slide, styles.slide3)}>RSVP</div>
+				</SwipeableViews>
 			</div>
-		</div>
-	);
+		);
+	}
 }
 
-export default App;
+export default DemoTabs;
+
+const styles = {
+	tabs: {
+		background: "#fff"
+	},
+	slide: {
+		padding: 15,
+		height: 500,
+		color: "#fff"
+	},
+	slide1: {
+		backgroundColor: "#FEA900"
+	},
+	slide2: {
+		backgroundColor: "#B3DC4A"
+	},
+	slide3: {
+		backgroundColor: "#6AC0FF"
+	}
+};
