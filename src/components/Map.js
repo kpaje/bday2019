@@ -18,7 +18,7 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-	apiKey: "AIzaSyCDY7vcuarb4K7ecwEzDN_FwCgxl5BDUVM"
+	apiKey: "API_KEY"
 })(MapContainer);
 
 const mapStyles = {

@@ -33,9 +33,9 @@ class DemoTabs extends Component {
 					onChange={this.handleChange}
 					style={styles.tabs}
 				>
-					<Tab label="WHERE" />
+					<Tab label="LOLWHAT?" />
 					<Tab label="WHEN" />
-					<Tab label="RSVP" />
+					{/* <Tab label="RSVP" /> */}
 				</Tabs>
 				<SwipeableViews index={index} onChangeIndex={this.handleChangeIndex}>
 					<div style={Object.assign({}, styles.slide, styles.slide1)}>

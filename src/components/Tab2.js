@@ -6,7 +6,9 @@ function Tab2() {
 	return (
 		<div>
 			<header style={styles.header}>
-				<h1>August 17th 2019</h1>
+				<h1>Sturday, August 17th 2019</h1>
+				<h1>@</h1>
+				<h1>8:00PM</h1>
 				<h1>Rock Box Seattle</h1>
 			</header>
 			<img src={picture} style={styles.map} alt="logo" />
