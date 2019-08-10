@@ -2,6 +2,7 @@
 	"name": "bday2019",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "https://kpaje.github.io/bday2019/",
 	"dependencies": {
 		"@material-ui/core": "^4.3.1",
 		"google-maps-react": "^2.0.2",
