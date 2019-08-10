@@ -5,7 +5,7 @@ import SwipeableViews from "react-swipeable-views";
 import Tab1 from "./components/Tab1";
 import Tab2 from "./components/Tab2";
 
-class DemoTabs extends Component {
+class App extends Component {
 	state = {
 		index: 0
 	};
@@ -33,7 +33,7 @@ class DemoTabs extends Component {
 					onChange={this.handleChange}
 					style={styles.tabs}
 				>
-					<Tab label="LOLWHAT?" />
+					<Tab label="WHAT" />
 					<Tab label="WHEN" />
 					{/* <Tab label="RSVP" /> */}
 				</Tabs>
@@ -51,22 +51,23 @@ class DemoTabs extends Component {
 	}
 }
 
-export default DemoTabs;
+export default App;
 
 const styles = {
 	tabs: {
-		background: "#fff"
+		background: "#6bd7c4",
+		color: "#773d82"
 	},
 	slide: {
 		padding: 15,
 		height: "100%",
-		color: "#fff"
+		color: "#000000"
 	},
 	slide1: {
-		backgroundColor: "#FEA900"
+		backgroundColor: "#773d82"
 	},
 	slide2: {
-		backgroundColor: "#B3DC4A"
+		backgroundColor: "#b7b7b9"
 	},
 	slide3: {
 		backgroundColor: "#6AC0FF"
